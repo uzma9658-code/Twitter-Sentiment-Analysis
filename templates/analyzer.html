@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>AI Sentiment Analyzer</h2>
+
+<form method="POST">
+    <textarea name="text" placeholder="Enter tweet here..." required></textarea>
+    <button type="submit">Analyze</button>
+</form>
+
+{% if prediction %}
+    <div class="result">
+        <h3>Sentiment: {{ prediction }} {{ emoji }}</h3>
+    </div>
+{% endif %}
+
+{% endblock %}
